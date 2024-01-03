@@ -286,7 +286,7 @@ let
   confFile = pkgs.writeText "httpd.conf" ''
 
     ServerRoot ${pkg}
-    ServerName ${config.networking.hostName}
+    ServerName ${config.networking.fqdnOrHostName}
     DefaultRuntimeDir ${runtimeDir}/runtime
 
     PidFile ${runtimeDir}/httpd.pid
